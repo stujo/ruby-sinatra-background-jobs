@@ -25,7 +25,8 @@ require_relative "helpers/auth"
 
 #require_relative "helpers/..."
 
-#require_relative "models/...."
+require_relative "models/location"
+require_relative "models/datapoint"
 
 require_relative "controllers/home"
 require_relative "controllers/auth"
