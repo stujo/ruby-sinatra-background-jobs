@@ -4,6 +4,9 @@ Dotenv.load
 rescue
 end
 
+APP_NAME = File.basename(File.dirname(__FILE__))
+puts "Loading #{APP_NAME}"
+
 require 'sinatra'
 
 require 'sinatra/activerecord'
@@ -23,13 +26,14 @@ require_relative "helpers/formatting"
 require_relative "helpers/layout"
 require_relative "helpers/auth"
 
-#require_relative "helpers/..."
+require_relative "helpers/api"
 
 require_relative "models/location"
 require_relative "models/datapoint"
 
 require_relative "controllers/home"
 require_relative "controllers/auth"
+require_relative "controllers/api_locations"
 
 enable :sessions
 set :session_secret, ENV['SESSION_SECRET'] || 'MY_DEV_SECRETS'

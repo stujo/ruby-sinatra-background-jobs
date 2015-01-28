@@ -28,15 +28,6 @@ ActiveRecord::Schema.define(version: 20150128022800) do
     t.boolean "active"
   end
 
-  create_table "notes", force: :cascade do |t|
-    t.boolean  "complete"
-    t.text     "content"
-    t.string   "github_username"
-    t.string   "github_repo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email"
   end

@@ -27,11 +27,12 @@ group :development, :test do
   gem 'rspec-html-matchers'
   gem 'webmock'
   gem 'faker'
-  gem 'rspec'
+  gem 'rspec', '~>3.1'
   gem 'rack-test'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rerun'
 end
